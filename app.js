@@ -12,9 +12,11 @@ function init()
     latin = document.getElementById("latin");
 
     latinbutt.addEventListener("click", searchLatin);
+    latin.addEventListener("keypress", function (e) {if (e.key === "Enter") searchLatin();});
 
     englishbutt = document.getElementById("englishbutt");
     english = document.getElementById("english");
+    english.addEventListener("keypress", function (e) {if (e.key === "Enter") searchEnglish();});
 
     englishbutt.addEventListener("click", searchEnglish);
 }
