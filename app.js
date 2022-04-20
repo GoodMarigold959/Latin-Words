@@ -51,13 +51,13 @@ function searchEnglish()
     if (input.value == ''){
         input.classList.add("error");
         input.placeholder = "Please type something!";
-        input.addEventListener("animationend", () => {input.classList.remove("error");});
+        input.addEventListener("animationend", () => {input.classList.remove("error")});
         return;
     }
 
     englishbutt.classList.add("mleft");
     latinbutt.classList.add("mfarLeft");
-    latinbutt.addEventListener("animationend", () => {
-    window.location.href = "http://archives.nd.edu/cgi-bin/wordz.pl?english=" + input.value
-    });
+    englishbutt.addEventListener("animationend", () => {
+        window.location.href = "http://archives.nd.edu/cgi-bin/wordz.pl?english=" + input.value;
+        })
 }
